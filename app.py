@@ -23,8 +23,6 @@ def speak(text):
     pygame.mixer.music.load(fp, 'mp3')
     pygame.mixer.music.play()
 
-
-
 app = Flask(__name__)
 CORS(app)
 
