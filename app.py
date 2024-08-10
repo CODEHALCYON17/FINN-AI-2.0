@@ -24,9 +24,7 @@ def speak(text):
     pygame.mixer.music.play()
 
 app = Flask(__name__)
-cors = CORS(app, resources={
-    r"/predict": {"origins": "http://127.0.0.1:5500"}
-})
+CORS(app)
 
 # Load model and data
 with open('intents.json', 'r') as f:

@@ -207,12 +207,26 @@
                 "Who is leading fisat as Principal?",
                 "I’d like to know about the Principal of fisat.",
                 "Who is the person acting as Principal at fisat?",
-                "Who is the Principal at fisat?"
+                "Who is the Principal at fisat?",
+                "Who is Principal"
             ],
             "responses": [
-                "The current Principal of fisat is Prof. (Dr) Jacob Thomas V. He joined fisat on 01-01-2024 and holds a graduation in Electronics Engineering from the National Institute of Technology, Surat, and a Masters in Biomedical Engineering from IIT Madras."
+                "The current Principal of fisat is Professor (Dr) Jacob Thomas V. He joined fisat on 01-01-2024 and holds a graduation in Electronics Engineering from the National Institute of Technology, Surat, and a Masters in Biomedical Engineering from IIT Madras."
             ]
         },
+        {
+            "tag": "finn",
+            "patterns": [
+                "who are you?",
+                "who is finn",
+                "what is finn ai"
+                
+            ],
+            "responses": [
+                "I am FINN AI, the personalized AI chatbot of IEEE FISAT SB. I am designed to offer you immediate assistance, address your queries, and guide you through our services seamlessly. Whether you seek information, require support, or simply want to have a chat, I am here to help As the cherished SB mascot, Captain Finn, I am accessible 24/7 to provide instant support whenever you need it. With a user-friendly interface, interacting with me is easy and natural. My aim is to ensure that you receive the best possible assistance, and I am always here to support you. Happy chatting"
+            ]
+        }
+        ,
         {
             "tag": "past_counsellor",
             "patterns": [
@@ -1290,6 +1304,75 @@
                 "The contact number of the IEEE FISAT SB Chair, Bhavana R Nair, is 7994880936"
             ]
         },
+        {
+            "tag": "what_is_impulse",
+            "patterns": [
+                "What is Impulse 5.0, and what activities can participants expect during this two-day event?",
+                "When and where will Impulse 5.0 take place, and who are the key speakers or guests involved in the event?",
+                "How can students and professionals register to attend Impulse 5.0, and are there any fees associated with participation?",
+                "What specific topics or themes will be covered during Impulse 5.0, and how do they relate to advancements in signal processing?",
+                "What opportunities for networking and collaboration will be available to attendees of Impulse 5.0, and how can participants benefit from these connections?",
+                "What is impulse 5.0?"
+            ],
+            "responses": [
+                "It is the two day flagship event of IEEE Fisat Sb in collaboration with IEEE Signal Processing Society Kerala Chapter."
+            ]
+         
+
+
+        },
+        {
+            "tag": "impulse_events",
+            "patterns": [
+                "What types of events are being conducted as part of Impulse 5.0?",
+                "Can you provide a detailed agenda of the events scheduled during Impulse 5.0?",
+                "What workshops and interactive sessions will be featured under Impulse 5.0?",
+                "What specific topics or themes will be covered during Impulse 5.0, and how do they relate to advancements in signal processing?",
+                "Are there any special activities or competitions planned for Impulse 5.0, and what are they?",
+                "What are the events conducted under impulse5.0"
+            ],
+            "responses": [
+                "Tech and nontech workshops, talk sessions, fun activities, ice breaking sessions, treasure hunts and so on."
+            ]
+         
+
+
+        }
+        ,{
+            "tag": "impulse_leads",
+            "patterns": [
+                "Who are the main organizers and leads behind Impulse 5.0?",
+                "What specific roles do the leads of Impulse 5.0 hold in organizing the event?",
+                "Can you provide some background information on the key leads of Impulse 5.0 and their experience?",
+                "How is the leadership team structured for Impulse 5.0, and who are the individuals in charge?",
+                "Who are the leads of impulse5.0?"
+            ],
+            "responses": [
+                "Shivani Krisnan,Afeefa M S,Aaron Easo,Advaith G Menon"
+            ]
+         
+
+
+        },
+        
+        
+        {
+            "tag": "impulse_guest",
+            "patterns": [
+                "Who will be the chief guest for Impulse 5.0?",
+                "What is the significance of having the selected chief guest at Impulse 5.0?",
+            "What role will the chief guest play during Impulse 5.0?",
+            "Who is the chief guest of impulse 5.0?"
+     
+            ],
+            "responses": [
+                "Dr. K R Suresh Nair : Founder and MD of Amara Raja Design Alpha"
+            ]
+         
+
+
+        }
+        ,
         {
             "tag": "contact_number_immediate_past_chair_fisat_sb",
             "patterns": [
