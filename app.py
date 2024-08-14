@@ -9,6 +9,7 @@ import random
 from gtts import gTTS
 import pygame
 import io
+import os
 
 def speak(text):
     # Initialize pygame mixer
