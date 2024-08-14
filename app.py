@@ -47,28 +47,33 @@ model.eval()
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    message = request.json['message']
-    sentence = tokenize(message)
-    X = bag_of_words(sentence, all_words)
-    X = X.reshape(1, X.shape[0])
-    X = torch.from_numpy(X)
+    try:
+        message = request.json['message']
+        sentence = tokenize(message)
+        X = bag_of_words(sentence, all_words)
+        X = X.reshape(1, X.shape[0])
+        X = torch.from_numpy(X)
 
-    output = model(X)
-    _, predicted = torch.max(output, dim=1)
-    tag = tags[predicted.item()]
+        output = model(X)
+        _, predicted = torch.max(output, dim=1)
+        tag = tags[predicted.item()]
 
-    probs = torch.softmax(output, dim=1)
-    prob = probs[0][predicted.item()]
+        probs = torch.softmax(output, dim=1)
+        prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.75:
-        for intent in intents['intents']:
-            if tag == intent["tag"]:
-                response=random.choice(intent['responses'])
-                speak(response)
-                return jsonify({"message": response})
-            
-    speak("I do not understand")
-    return jsonify({"message": "I do not understand..."})
+        if prob.item() > 0.75:
+            for intent in intents['intents']:
+                if tag == intent["tag"]:
+                    response = random.choice(intent['responses'])
+                    speak(response)
+                    return jsonify({"message": response})
+
+        speak("I do not understand")
+        return jsonify({"message": "I do not understand..."})
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"message": "An error occurred. Please try again later."}), 500
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
