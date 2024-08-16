@@ -11,18 +11,18 @@ import pygame
 import io
 import os
 
-def speak(text):
-    # Initialize pygame mixer
-    pygame.mixer.init()
+# def speak(text):
+#     # Initialize pygame mixer
+#     pygame.mixer.init()
     
-    tts = gTTS(text, lang='en', tld='com')
-    fp = io.BytesIO()
-    tts.write_to_fp(fp)
-    fp.seek(0)
+#     tts = gTTS(text, lang='en', tld='com')
+#     fp = io.BytesIO()
+#     tts.write_to_fp(fp)
+#     fp.seek(0)
 
-    # Load the speech into pygame
-    pygame.mixer.music.load(fp, 'mp3')
-    pygame.mixer.music.play()
+#     # Load the speech into pygame
+#     pygame.mixer.music.load(fp, 'mp3')
+#     pygame.mixer.music.play()
 
 app = Flask(__name__)
 CORS(app)
