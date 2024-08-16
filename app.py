@@ -68,8 +68,8 @@ def predict():
                     speak(response)
                     return jsonify({"message": response})
 
-        speak("I do not understand")
-        return jsonify({"message": "I do not understand..."})
+        # speak("I do not understand")
+        # return jsonify({"message": "I do not understand..."})
 
     except Exception as e:
         print(f"Error: {e}")
